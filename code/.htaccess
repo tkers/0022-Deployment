@@ -1,0 +1,6 @@
+SetEnv no-gzip dont-vary
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?req=$1 [L,QSA]
